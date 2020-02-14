@@ -94,7 +94,7 @@ export const deleteEmptyString = (test, recurse) => {
 		if (test[i] === '') {
 			delete test[i];
 		} else if (recurse && typeof test[i] === 'object') {
-			this.deleteEmptyString(test[i], recurse);
+			deleteEmptyString(test[i], recurse);
 		}
 	}
 };
@@ -106,7 +106,7 @@ export const deleteEmptyString = (test, recurse) => {
  */
 export const deleteEmptyObject = (test, recurse) => {
 	for (let i in test) {
-		if (isEmpty(test[i])) {
+		if (test[i] === undefined || test[i] === null || test[i] === '') {
 			delete test[i];
 		} else if (recurse && typeof test[i] === 'object') {
 			deleteEmptyObject(test[i], recurse);
@@ -123,7 +123,7 @@ export const removeEmpty = obj => {
 	Object.keys(obj).forEach(function(key) {
 		(obj[key] &&
 			typeof obj[key] === 'object' &&
-			this.removeEmpty(obj[key])) ||
+			removeEmpty(obj[key])) ||
 		((obj[key] === undefined || obj[key] === null || obj[key] === '') &&
 			delete obj[key]);
 	});

@@ -35,7 +35,7 @@ export const download = ({
 		});
 		document.body.appendChild(elink);
 		elink.click();
-		URL.revokeObjectURL(elink.href); // 释放URL 对象
+		URL.revokeObjectURL(elink.href); //释放URL 对象
 		document.body.removeChild(elink);
 	} else {
 		//IE10+下载

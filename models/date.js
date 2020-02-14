@@ -4,7 +4,7 @@
  * @param {string} cFormat
  * @returns {string}
  */
-export function parseTime(time, cFormat) {
+export const parseTime = (time, cFormat) => {
 	if (arguments.length === 0) {
 		return null;
 	}
@@ -49,7 +49,7 @@ export function parseTime(time, cFormat) {
  * @param {string} option
  * @returns {string}
  */
-export function formatTime(time, option) {
+export const formatTime = (time, option) => {
 	if (("" + time).length === 10) {
 		time = parseInt(time) * 1000;
 	} else {
@@ -104,15 +104,13 @@ export const getTodayTimestamp = () => new Date().setHours(0, 0, 0, 0);
  * 获取当天前x天的时间戳
  * @return
  */
-export const getBeforeDay = day =>
-	new Date().setHours(0, 0, 0, 0) - 86400000 * day;
+export const getBeforeDay = day => new Date().setHours(0, 0, 0, 0) - 86400000 * day;
 
 /**
  * 获取当天后x天的时间戳
  * @return
  */
-export const getAfterDay = day =>
-	new Date().setHours(0, 0, 0, 0) + 86400000 * day;
+export const getAfterDay = day => new Date().setHours(0, 0, 0, 0) + 86400000 * day;
 
 /**
  * 毫秒转化成天时分秒的时间格式
