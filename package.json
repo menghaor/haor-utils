@@ -1,6 +1,6 @@
 {
   "name": "haor-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "在我们日常开发中，每个公司都有自己的工具类，当然封装的方法不同， 有的可能就会放在一个 `utils/index.js`  文件中，  但是这样存在一个问题就是，如果方法过多的话，维护起来很麻烦，后面就想了一下，对模块进行拆分，常见的比如分为： `base、date、file、data、security...` 等模块，每个模块做自己对应的方法，如有新增模块，只需要在 `utils/index` 暴露出去即可， 最后对外界通过`index.js`  导入使用, 这样实现的功能是一样的，而且维护成本低了很多。",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/Luomenghao/lmh_utils.git"
+    "url": "https://github.com/menghaor/haor-utils"
   },
   "keywords": [],
   "author": "",
