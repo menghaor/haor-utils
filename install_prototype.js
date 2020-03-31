@@ -6,7 +6,7 @@
 
 import * as utils from "./index";
 export default {
-	install(Vue) {
-		if (Vue) Vue.prototype.$utils = utils;
-	}
+    install(Vue) {
+        if (Vue) Vue.prototype.$utils = utils;
+    }
 };
